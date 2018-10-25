@@ -1,0 +1,30 @@
+baseUrl: 'https://allinone.de/'
+languageName: Deutsch
+languageCode: de-de
+title: All in One
+slogan: You'll be surprized!
+permalinks:
+  articles: '/artikel/:title'
+
+#theme: oldterm
+
+related_content_limit: 5
+
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
+pygmentsOptions: 'linenos=table,nowrap=true'
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: true
+pygmentsUseClasses: true
+
+blackfriday:
+  hrefTargetBlank: true
+  noreferrerLinks: true
+  fractions: false
+  taskLists: true
+  plainIDAnchors: true
+  extensions:
+    - hardLineBreak
+    - autoHeaderIds
