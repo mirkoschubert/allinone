@@ -1,0 +1,8 @@
+{{ if ne .Site.Params.show_menu false }}
+{{ $currentNode := . }}
+  {{ range .Site.Menus.main }}
+  <div class="site-header-item button{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}">
+    <a itemprop="url" class="" href="{{ .URL }}"><span itemprop="name">{{ .Name }}</span></a>
+  </div>
+  {{ end }}
+{{ end }}

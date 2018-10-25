@@ -6,7 +6,7 @@ slogan: You'll be surprized!
 permalinks:
   articles: '/artikel/:title'
 
-theme: arabica
+theme: allinone
 
 related_content_limit: 5
 

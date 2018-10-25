@@ -1,0 +1,12 @@
+{{ define "header" }}{{ end }}
+{{ define "main" }}
+  <header class="list">
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+{{ end }}
+{{ define "footer" }}
+  {{ partial "footer/pagination.html" . }}
+  <hr>
+  {{ partial "footer/menu.html" . }}
+{{ end }}

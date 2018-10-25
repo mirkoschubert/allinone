@@ -1,0 +1,14 @@
+{{ if ne .Site.Params.show_menu false }}
+<nav class="footer-menu container" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  {{ $currentNode := . }}
+  <ul>
+  {{ range .Site.Menus.footer }}
+  <!--   {{ printf "%#v" ($currentNode.IsMenuCurrent "main" . ) }} -->
+    <li>
+  <a itemprop="url" class="{{if or ($currentNode.IsMenuCurrent "footer" .) ($currentNode.HasMenuCurrent "footer" .) }}active{{end}}"
+    href="{{ .URL }}"><span itemprop="name">{{ .Name }}</span></a>
+    </li>
+  {{ end }}
+  </ul>
+</nav>
+{{ end }}

@@ -1,0 +1,32 @@
+<nav class="pagination container">
+  <table>
+    <tbody>
+      <tr>
+        <td class="back">
+          {{ if and .IsPage .Params.urls.back }}
+            <a accesskey="." href="{{ .Params.urls.back }}">Zurück</a>
+          {{ end }}
+        </td>
+        <td class="pages">
+          {{ if not .IsPage }}
+            {{if .Paginator.HasPrev }}
+              <a href="{{ .Paginator.Prev.URL }}">&laquo; Previous</a> | {{ end }}
+            {{ if (eq .Paginator.TotalPages 0) }}
+              <span>Page {{ .Paginator.PageNumber }} of 1</span>
+            {{ else }}
+              <span>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+            {{ end }}
+            {{ if .Paginator.HasNext }} |
+              <a accesskey="ArrowRight" href="{{ .Paginator.Next.URL }}">Next &raquo;</a>
+            {{ end }}
+          {{ end }}
+        </td>
+        <td class="visit">
+          {{ if and .IsPage .Params.urls.visit }}
+            <a href="{{ .Params.urls.visit }}" target="_blank">Besuchen</a>
+          {{ end }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</nav>
