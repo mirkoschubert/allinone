@@ -1,0 +1,12 @@
+[submodule "themes/mediumish"]
+	path = themes/mediumish
+	url = https://github.com/lgaida/mediumish-gohugo-theme
+[submodule "themes/arabica"]
+	path = themes/arabica
+	url = https://github.com/nirocfz/arabica
+[submodule "themes/split"]
+	path = themes/split
+	url = https://github.com/escalate/hugo-split-theme.git
+[submodule "themes/story"]
+	path = themes/story
+	url = https://github.com/xaprb/story.git
